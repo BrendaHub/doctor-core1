@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.doctor330.cloud.modules.res.dao.BgResourceCategoryDao">
+    
+	<sql id="bgResourceCategoryColumns">
+		a.id AS "id",
+		a.categoryname AS "categoryname",
+		a.encategoryname AS "encategoryname",
+		a.fathercatid AS "fathercatid",
+		a.fathercatname AS "fathercatname",
+		a.isorder AS "isorder",
+		a.isuse AS "isuse",
+		a.remark AS "remark",
+		a.addtime AS "addtime",
+		a.adduser AS "adduser",
+		a.updatetime AS "updatetime",
+		a.updateuser AS "updateuser",
+		a.templateid AS "templateid",
+		a.originalpicurl AS "originalpicurl",
+		a.bigpicurl AS "bigpicurl",
+		a.centerpicurl AS "centerpicurl",
+		a.smallpicurl AS "smallpicurl"
+	</sql>
+	
+	<sql id="bgResourceCategoryJoins">
+	</sql>
+    
+	<select id="get" resultType="BgResourceCategory">
+		SELECT 
+			<include refid="bgResourceCategoryColumns"/>
+		FROM bg_resource_category a
+		<include refid="bgResourceCategoryJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="BgResourceCategory">
+		SELECT 
+			<include refid="bgResourceCategoryColumns"/>
+		FROM bg_resource_category a
+		<include refid="bgResourceCategoryJoins"/>
+		<where>
+			
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="BgResourceCategory">
+		SELECT 
+			<include refid="bgResourceCategoryColumns"/>
+		FROM bg_resource_category a
+		<include refid="bgResourceCategoryJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO bg_resource_category(
+			id,
+			categoryname,
+			encategoryname,
+			fathercatid,
+			fathercatname,
+			isorder,
+			isuse,
+			remark,
+			addtime,
+			adduser,
+			updatetime,
+			updateuser,
+			templateid,
+			originalpicurl,
+			bigpicurl,
+			centerpicurl,
+			smallpicurl
+		) VALUES (
+			#{id},
+			#{categoryname},
+			#{encategoryname},
+			#{fathercatid},
+			#{fathercatname},
+			#{isorder},
+			#{isuse},
+			#{remark},
+			#{addtime},
+			#{adduser},
+			#{updatetime},
+			#{updateuser},
+			#{templateid},
+			#{originalpicurl},
+			#{bigpicurl},
+			#{centerpicurl},
+			#{smallpicurl}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE bg_resource_category SET 	
+			categoryname = #{categoryname},
+			encategoryname = #{encategoryname},
+			fathercatid = #{fathercatid},
+			fathercatname = #{fathercatname},
+			isorder = #{isorder},
+			isuse = #{isuse},
+			remark = #{remark},
+			addtime = #{addtime},
+			adduser = #{adduser},
+			updatetime = #{updatetime},
+			updateuser = #{updateuser},
+			templateid = #{templateid},
+			originalpicurl = #{originalpicurl},
+			bigpicurl = #{bigpicurl},
+			centerpicurl = #{centerpicurl},
+			smallpicurl = #{smallpicurl}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM bg_resource_category
+		WHERE id = #{id}
+	</update>
+	
+	<select id="getIsOrder" parameterType="string" resultType="Integer">
+		SELECT max(bc.IsOrder) FROM bg_resource_category bc
+		where bc.FatherCatID = #{id}
+	</select>
+	
+	<select id="findFatherList" resultType="BgResourceCategory">
+			SELECT bc.ID,bc.CategoryName FROM bg_resource_category bc 
+			where bc.FatherCatID is null 
+	</select>
+	
+</mapper>

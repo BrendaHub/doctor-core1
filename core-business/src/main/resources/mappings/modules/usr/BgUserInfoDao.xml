@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.doctor330.cloud.modules.usr.dao.BgUserInfoDao">
+    
+	<sql id="bgUserInfoColumns">
+		a.id AS "id",
+		a.username AS "username",
+		a.mobile AS "mobile",
+		a.realname AS "realname",
+		a.sex AS "sex",
+		a.email AS "email",
+		a.emailvalidate AS "emailvalidate",
+		a.emailvalidatedate AS "emailvalidatedate",
+		a.password AS "password",
+		a.registertype AS "registertype",
+		a.registerdate AS "registerdate",
+		a.headerpic AS "headerpic",
+		a.position AS "position",
+		a.company AS "company",
+		a.resume AS "resume",
+		a.wechat AS "wechat",
+		a.cardurl AS "cardurl",
+		a.countryid AS "countryid",
+		a.provinceid AS "provinceid",
+		a.cityid AS "cityid",
+		a.areaid AS "areaid",
+		a.registerfrom AS "registerfrom",
+		a.label AS "label",
+		a.completedamount AS "completedamount",
+		a.updatetime AS "updatetime",
+		a.isauth AS "isauth",
+		a.weight AS "weight"
+	</sql>
+	
+	<sql id="bgUserInfoJoins">
+	</sql>
+    
+	<select id="get" resultType="BgUserInfo">
+		SELECT 
+			<include refid="bgUserInfoColumns"/>
+		FROM bg_user_info a
+		<include refid="bgUserInfoJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="BgUserInfo">
+		SELECT 
+			<include refid="bgUserInfoColumns"/>
+		FROM bg_user_info a
+		<include refid="bgUserInfoJoins"/>
+		<where>
+			
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="BgUserInfo">
+		SELECT 
+			<include refid="bgUserInfoColumns"/>
+		FROM bg_user_info a
+		<include refid="bgUserInfoJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO bg_user_info(
+			id,
+			username,
+			mobile,
+			realname,
+			sex,
+			email,
+			emailvalidate,
+			emailvalidatedate,
+			password,
+			registertype,
+			registerdate,
+			headerpic,
+			position,
+			company,
+			resume,
+			wechat,
+			cardurl,
+			countryid,
+			provinceid,
+			cityid,
+			areaid,
+			registerfrom,
+			label,
+			completedamount,
+			updatetime,
+			isauth,
+			weight
+		) VALUES (
+			#{id},
+			#{username},
+			#{mobile},
+			#{realname},
+			#{sex},
+			#{email},
+			#{emailvalidate},
+			#{emailvalidatedate},
+			#{password},
+			#{registertype},
+			#{registerdate},
+			#{headerpic},
+			#{position},
+			#{company},
+			#{resume},
+			#{wechat},
+			#{cardurl},
+			#{countryid},
+			#{provinceid},
+			#{cityid},
+			#{areaid},
+			#{registerfrom},
+			#{label},
+			#{completedamount},
+			#{updatetime},
+			#{isauth},
+			#{weight}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE bg_user_info SET 	
+			username = #{username},
+			mobile = #{mobile},
+			realname = #{realname},
+			sex = #{sex},
+			email = #{email},
+			emailvalidate = #{emailvalidate},
+			emailvalidatedate = #{emailvalidatedate},
+			password = #{password},
+			registertype = #{registertype},
+			registerdate = #{registerdate},
+			headerpic = #{headerpic},
+			position = #{position},
+			company = #{company},
+			resume = #{resume},
+			wechat = #{wechat},
+			cardurl = #{cardurl},
+			countryid = #{countryid},
+			provinceid = #{provinceid},
+			cityid = #{cityid},
+			areaid = #{areaid},
+			registerfrom = #{registerfrom},
+			label = #{label},
+			completedamount = #{completedamount},
+			updatetime = #{updatetime},
+			isauth = #{isauth},
+			weight = #{weight}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM bg_user_info
+		WHERE id = #{id}
+	</update>
+	
+	<!-- 自定义SQL -->
+
+	<select id="findRoleList" resultType="BgUserInfo">
+		SELECT
+		<include refid="bgUserInfoColumns" />
+		from bg_user_info a
+		where a.id IN (select r.UserID from bg_user_role r where r.RoleID = (select id from sys_dict s where (s.type='user_role' and s.label='BigShot'))) order by weight;
+	</select>
+	
+</mapper>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.doctor330.cloud.modules.push.dao.BgUserPushDao">
+    
+	<sql id="bgUserPushColumns">
+		a.id AS "id",
+		a.userid AS "userid",
+		a.clientid AS "clientid",
+		a.addtime AS "addtime",
+		a.ostype AS "ostype"
+	</sql>
+	
+	<sql id="bgUserPushJoins">
+	</sql>
+    
+	<select id="get" resultType="BgUserPush">
+		SELECT 
+			<include refid="bgUserPushColumns"/>
+		FROM bg_user_push a
+		<include refid="bgUserPushJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="BgUserPush">
+		SELECT 
+			<include refid="bgUserPushColumns"/>
+		FROM bg_user_push a
+		<include refid="bgUserPushJoins"/>
+		<where>
+			<if test="userid != null">
+				a.userid=#{userid}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="BgUserPush">
+		SELECT 
+			<include refid="bgUserPushColumns"/>
+		FROM bg_user_push a
+		<include refid="bgUserPushJoins"/>
+		<where>
+			<if test="userid != null">
+				a.userid=#{userid}
+			</if>
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO bg_user_push(
+			id,
+			userid,
+			clientid,
+			addtime,
+			ostype
+		) VALUES (
+			#{id},
+			#{userid},
+			#{clientid},
+			#{addtime},
+			#{ostype}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE bg_user_push SET 	
+			userid = #{userid},
+			clientid = #{clientid},
+			addtime = #{addtime},
+			ostype = #{ostype}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM bg_user_push
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

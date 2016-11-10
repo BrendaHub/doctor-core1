@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.doctor330.cloud.modules.usr.dao.BgUserRoleDao">
+    
+	<sql id="bgUserRoleColumns">
+		a.userid AS "userid",
+		a.roleid AS "roleid"
+	</sql>
+	
+	<sql id="bgUserRoleJoins">
+	</sql>
+    
+	<select id="get" resultType="BgUserRole">
+		SELECT 
+			<include refid="bgUserRoleColumns"/>
+		FROM bg_user_role a
+		<include refid="bgUserRoleJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="BgUserRole">
+		SELECT 
+			<include refid="bgUserRoleColumns"/>
+		FROM bg_user_role a
+		<include refid="bgUserRoleJoins"/>
+		<where>
+			
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="BgUserRole">
+		SELECT 
+			<include refid="bgUserRoleColumns"/>
+		FROM bg_user_role a
+		<include refid="bgUserRoleJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO bg_user_role(
+			userid,
+			roleid
+		) VALUES (
+			#{userid},
+			#{roleid}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE bg_user_role SET 	
+			userid = #{userid},
+			roleid = #{roleid}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		DELETE FROM bg_user_role
+		WHERE id = #{id}
+	</update>
+	
+</mapper>
