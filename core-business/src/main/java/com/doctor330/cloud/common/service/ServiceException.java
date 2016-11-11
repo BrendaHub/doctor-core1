@@ -1,11 +1,11 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.common.service;
 
 /**
  * Service层公用的Exception, 从由Spring管理事务的函数中抛出时会触发事务回滚.
- * @author ThinkGem
+ * @author Doctor330
  */
 public class ServiceException extends RuntimeException {
 

@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.common.service;
 
@@ -14,7 +14,7 @@ import com.doctor330.cloud.common.persistence.Page;
 
 /**
  * Service基类
- * @author ThinkGem
+ * @author Doctor330
  * @version 2014-05-16
  */
 @Transactional(readOnly = true)

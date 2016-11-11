@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.cms.entity;
 
@@ -11,7 +11,7 @@ import com.doctor330.cloud.common.persistence.DataEntity;
 
 /**
  * 文章Entity
- * @author ThinkGem
+ * @author Doctor330
  * @version 2013-01-15
  */
 public class ArticleData extends DataEntity<ArticleData> {

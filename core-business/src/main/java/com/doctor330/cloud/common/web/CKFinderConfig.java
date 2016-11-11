@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.common.web;
 
@@ -16,7 +16,7 @@ import com.ckfinder.connector.utils.AccessControlUtil;
 
 /**
  * CKFinder配置
- * @author ThinkGem
+ * @author Doctor330
  * @version 2014-06-25
  */
 public class CKFinderConfig extends Configuration {

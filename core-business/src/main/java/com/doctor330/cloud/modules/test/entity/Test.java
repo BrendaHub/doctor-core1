@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.test.entity;
 
@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 /**
  * 测试Entity
- * @author ThinkGem
+ * @author Doctor330
  * @version 2013-10-17
  */
 @SupTreeList(

@@ -1,5 +1,5 @@
 /**
- * There are <a href="https://github.com/thinkgem/jeesite">JeeSite</a> code generation
+ * There are <a href="https://github.com/Doctor330/jeesite">JeeSite</a> code generation
  */
 package com.doctor330.cloud.modules.oa.web;
 

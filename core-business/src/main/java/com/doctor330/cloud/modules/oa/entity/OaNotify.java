@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.oa.entity;
 
@@ -16,7 +16,7 @@ import com.google.common.collect.Lists;
 
 /**
  * 通知通告Entity
- * @author ThinkGem
+ * @author Doctor330
  * @version 2014-05-16
  */
 public class OaNotify extends DataEntity<OaNotify> {

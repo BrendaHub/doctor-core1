@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.gen.web;
 
@@ -27,7 +27,7 @@ import com.doctor330.cloud.modules.sys.utils.UserUtils;
 
 /**
  * 生成方案Controller
- * @author ThinkGem
+ * @author Doctor330
  * @version 2013-10-15
  */
 @Controller

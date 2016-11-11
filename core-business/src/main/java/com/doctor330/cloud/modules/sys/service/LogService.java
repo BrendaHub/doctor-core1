@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2013 <a href="httparamMap://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2013 <a href="httparamMap://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.sys.service;
 
@@ -14,7 +14,7 @@ import com.doctor330.cloud.modules.sys.entity.Log;
 
 /**
  * 日志Service
- * @author ThinkGem
+ * @author Doctor330
  * @version 2014-05-16
  */
 @Service

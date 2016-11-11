@@ -1,6 +1,6 @@
 /**
  * jqGrid 封装类
- * @author ThinkGem@163.COM
+ * @author Doctor330@163.COM
  * @version 2015-5-4
  */
 var DataGrid = function(options, $this){
@@ -802,7 +802,7 @@ var DataGrid = function(options, $this){
 };
 
 /**
- * 封装为jQuery插件 ThinkGem
+ * 封装为jQuery插件 Doctor330
  */
 $.fn.dataGrid = function (option, value, v2, v3, v4, v5) {
 	var method_call;
@@ -871,7 +871,7 @@ $.extend($.jgrid,{
 
 /**
  * 扩展jqGrid方法
- * @author ThinkGem@163.com
+ * @author Doctor330@163.com
  * @version 2015-1-12
  * @param $
  */

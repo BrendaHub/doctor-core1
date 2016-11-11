@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.common.persistence;
 
@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Activiti Entity类
- * @author ThinkGem
+ * @author Doctor330
  * @version 2013-05-28
  */
 public abstract class ActEntity<T> extends DataEntity<T> implements Serializable {

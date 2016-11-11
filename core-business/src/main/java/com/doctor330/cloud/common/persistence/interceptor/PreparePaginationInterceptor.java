@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.common.persistence.interceptor;
 
@@ -21,7 +21,7 @@ import java.util.Properties;
 
 /**
  * Mybatis数据库分页插件，拦截StatementHandler的prepare方法
- * @author poplar.yfyang / thinkgem
+ * @author poplar.yfyang / Doctor330
  * @version 2013-8-28
  */
 @Intercepts({

@@ -105,7 +105,7 @@ $.extend($.jgrid,{
 			if( !isNaN( date - 0 ) && String(format).toLowerCase() === "u") {
 				//Unix timestamp
 				//timestamp = new Date( parseFloat(date)*1000 );
-				timestamp = new Date( parseFloat(date) ); // ThinkGem 修正日期格式化错误问题
+				timestamp = new Date( parseFloat(date) ); // Doctor330 修正日期格式化错误问题
 			} else if(date.constructor === Date) {
 				timestamp = date;
 				// Microsoft date format support
@@ -1132,12 +1132,12 @@ $.fn.jqGrid = function( pin ) {
 			return val == null || val === "" ? "&#160;" : (ts.p.autoencode ? $.jgrid.htmlEncode(val) : String(val));
 		},
 		//formatter = function (rowId, cellval , colpos, rwdat, _act){
-		formatter = function (rowId, cellval , colpos, rwdat, _act, irow){ // ThinkGem add irow 参数
+		formatter = function (rowId, cellval , colpos, rwdat, _act, irow){ // Doctor330 add irow 参数
 			var cm = ts.p.colModel[colpos],v;
 			if(cm.formatter !== undefined) {
 				rowId = String(ts.p.idPrefix) !== "" ? $.jgrid.stripPref(ts.p.idPrefix, rowId) : rowId;
 				//var opts= {rowId: rowId, colModel:cm, gid:ts.p.id, pos:colpos };
-				var opts= {rowId: rowId, colModel:cm, gid:ts.p.id, pos:colpos, irow:irow }; // ThinkGem add irow 参数
+				var opts= {rowId: rowId, colModel:cm, gid:ts.p.id, pos:colpos, irow:irow }; // Doctor330 add irow 参数
 				if($.isFunction( cm.formatter ) ) {
 					v = cm.formatter.call(ts,cellval,opts,rwdat,_act);
 				} else if($.fmatter){
@@ -1152,7 +1152,7 @@ $.fn.jqGrid = function( pin ) {
 		},
 		addCell = function(rowId,cell,pos,irow, srvr, rdata) {
 			var v,prp;
-			v = formatter(rowId,cell,pos,srvr,'add',irow); // ThinkGem add irow
+			v = formatter(rowId,cell,pos,srvr,'add',irow); // Doctor330 add irow
 			prp = formatCol( pos,irow, v, srvr, rowId, rdata);
 			return "<td role=\"gridcell\" "+prp+">"+v+"</td>";
 		},
@@ -1638,7 +1638,7 @@ $.fn.jqGrid = function( pin ) {
 				} else if(ts.p.treeGrid === true && fpos > 0) {
 					$(ts.rows[fpos]).after(rowData.join(''));
 				} else {
-					$("#"+$.jgrid.jqID(ts.p.id)+" tbody:first").append(rowData.join('')); // ThinkGem 恢复3.7被注释的代码，下面这一行不支持ie8
+					$("#"+$.jgrid.jqID(ts.p.id)+" tbody:first").append(rowData.join('')); // Doctor330 恢复3.7被注释的代码，下面这一行不支持ie8
 					//ts.firstElementChild.innerHTML += rowData.join(''); // append to innerHTML of tbody which contains the first row (.jqgfirstrow)
 					ts.grid.cols = ts.rows[0].cells; // update cached first row
 				}
@@ -3598,7 +3598,7 @@ $.jgrid.extend({
 			nwidth = parseInt(nwidth,10); 
 			$t.grid.width = $t.p.width = nwidth;
 			//$("#gbox_"+$.jgrid.jqID($t.p.id)).css("width",nwidth+"px");
-			$("#gbox_"+$.jgrid.jqID($t.p.id)).css("width",(nwidth+2)+"px"); // ThinkGem 修正宽度计算错误
+			$("#gbox_"+$.jgrid.jqID($t.p.id)).css("width",(nwidth+2)+"px"); // Doctor330 修正宽度计算错误
 			$("#gview_"+$.jgrid.jqID($t.p.id)).css("width",nwidth+"px");
 			$($t.grid.bDiv).css("width",nwidth+"px");
 			$($t.grid.hDiv).css("width",nwidth+"px");
@@ -3693,7 +3693,7 @@ $.jgrid.extend({
 			if($t.p.frozenColumns === true){
 				//follow the original set height to use 16, better scrollbar width detection
 				//$('#'+$.jgrid.jqID($t.p.id)+"_frozen").parent().height(bDiv.height() - 16);
-				$('#'+$.jgrid.jqID($t.p.id)+"_frozen").parent().height(bDiv.height() - 16+($.jgrid.msie?0:4)); // ThinkGem 修正IE下高度计算错误
+				$('#'+$.jgrid.jqID($t.p.id)+"_frozen").parent().height(bDiv.height() - 16+($.jgrid.msie?0:4)); // Doctor330 修正IE下高度计算错误
 			}
 			$t.p.height = nh;
 			if ($t.p.scroll) { $t.grid.populateVisible(); }
@@ -4861,7 +4861,7 @@ $.extend($.jgrid,{
 			case "select" :
 				elem = document.createElement("select");
 				elem.setAttribute("role","select");
-				$(elem).css({width:"98%"}); // ThinkGem select attr add width
+				$(elem).css({width:"98%"}); // Doctor330 select attr add width
 				var msl, ovm = [];
 				if(options.multiple===true) {
 					msl = true;
@@ -6041,7 +6041,7 @@ $.jgrid.extend({
 					}
 				}
 				//$t.grid.fhDiv = $('<div style="position:absolute;left:0px;top:'+top+'px;height:'+hth+'px;" class="frozen-div ui-state-default ui-jqgrid-hdiv"></div>');
-				$t.grid.fhDiv = $('<div style="position:absolute;left:0px;top:'+top+'px;height2:'+hth+'px;" class="frozen-div ui-state-default ui-jqgrid-hdiv"></div>'); // ThinkGem 修正标题栏高度计算错误
+				$t.grid.fhDiv = $('<div style="position:absolute;left:0px;top:'+top+'px;height2:'+hth+'px;" class="frozen-div ui-state-default ui-jqgrid-hdiv"></div>'); // Doctor330 修正标题栏高度计算错误
 				$t.grid.fbDiv = $('<div style="position:absolute;left:0px;top:'+(parseInt(top,10)+parseInt(hth,10) + 1)+'px;overflow-y:hidden" class="frozen-bdiv ui-jqgrid-bdiv"></div>');
 				$("#gview_"+$.jgrid.jqID($t.p.id)).append($t.grid.fhDiv);
 				var htbl = $(".ui-jqgrid-htable","#gview_"+$.jgrid.jqID($t.p.id)).clone(true);
@@ -6087,7 +6087,7 @@ $.jgrid.extend({
 					var hbd = $(".ui-jqgrid-bdiv","#gview_"+$.jgrid.jqID($t.p.id)).height();
 
 					//$t.grid.fsDiv = $('<div style="position:absolute;left:0px;top:'+(parseInt(top,10)+parseInt(hth,10) + parseInt(hbd,10)+1)+'px;" class="frozen-sdiv ui-jqgrid-sdiv"></div>');
-					$t.grid.fsDiv = $('<div style="position:absolute;left:0px;top2:'+(parseInt(top,10)+parseInt(hth,10) + parseInt(hbd,10)+1)+'px;" class="frozen-sdiv ui-jqgrid-sdiv"></div>'); // ThinkGem 修正锁定列，统计行位置计算错误
+					$t.grid.fsDiv = $('<div style="position:absolute;left:0px;top2:'+(parseInt(top,10)+parseInt(hth,10) + parseInt(hbd,10)+1)+'px;" class="frozen-sdiv ui-jqgrid-sdiv"></div>'); // Doctor330 修正锁定列，统计行位置计算错误
 					$("#gview_"+$.jgrid.jqID($t.p.id)).append($t.grid.fsDiv);
 					var ftbl = $(".ui-jqgrid-ftable","#gview_"+$.jgrid.jqID($t.p.id)).clone(true);
 					$("tr",ftbl).each(function(){
@@ -6134,11 +6134,11 @@ $.jgrid.extend({
 				}
 				$($t).bind('jqGridAfterGridComplete.setFrozenColumns', function () {
 					$("#"+$.jgrid.jqID($t.p.id)+"_frozen").remove();
-					$($t.grid.fhDiv).height($($t.grid.hDiv).height()); // ThinkGem add 修正锁定列，标题栏高度计算错误
+					$($t.grid.fhDiv).height($($t.grid.hDiv).height()); // Doctor330 add 修正锁定列，标题栏高度计算错误
 					//$($t.grid.fbDiv).height($($t.grid.bDiv).height()-16);
-					$($t.grid.fbDiv).height($($t.grid.bDiv).height()-16+($.jgrid.msie?0:4)); // ThinkGem 修正IE下高度计算错误
-					$($t.grid.fsDiv).css('top', $($t.grid.hDiv).height() + $($t.grid.fbDiv).height() - $($t.grid.fsDiv).height() - 1); // ThinkGem 修正锁定列，统计行位置计算错误
-					// ThinkGem 凑合用IE8下冻结列显示问题
+					$($t.grid.fbDiv).height($($t.grid.bDiv).height()-16+($.jgrid.msie?0:4)); // Doctor330 修正IE下高度计算错误
+					$($t.grid.fsDiv).css('top', $($t.grid.hDiv).height() + $($t.grid.fbDiv).height() - $($t.grid.fsDiv).height() - 1); // Doctor330 修正锁定列，统计行位置计算错误
+					// Doctor330 凑合用IE8下冻结列显示问题
 					//if (!! navigator.userAgent.match(/MSIE/) ||  !!(navigator.userAgent.match(/Trident/))){
 					if (!!navigator.userAgent.match(/MSIE 8.0/)){
 						setTimeout(function(){
@@ -12307,7 +12307,7 @@ $.jgrid.extend({
 					}
 				}
 			}
-			// ThinkGem add eveal onExpandNode
+			// Doctor330 add eveal onExpandNode
 			if($.isFunction(this.p.onExpandNode)) {this.p.onExpandNode(rc);}
 		});
 	},
@@ -12321,7 +12321,7 @@ $.jgrid.extend({
 				var rc1 = $("#" + this.p.idPrefix + $.jgrid.jqID(id),this.grid.bDiv)[0];
 				$("div.treeclick",rc1).removeClass(this.p.treeIcons.minus+" tree-minus").addClass(this.p.treeIcons.plus+" tree-plus");
 			}
-			// ThinkGem add eveal onCollapseNode
+			// Doctor330 add eveal onCollapseNode
 			if($.isFunction(this.p.onCollapseNode)) {this.p.onCollapseNode(rc);}
 		});
 	},
