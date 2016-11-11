@@ -21,7 +21,7 @@ public interface INewsService {
 	 * @param pageSize 页面大小
 	 * @return
 	 */
-	public String getNewsList(String orderBy,Integer pageNo,Integer pageSize);
+    String getNewsList(String orderBy, Integer pageNo, Integer pageSize);
 
 	/**
 	 * @description 获取所有资讯列表
@@ -32,7 +32,7 @@ public interface INewsService {
 	 * @since
 	 * @return
 	 */
-	public String getNewsDetail(String newsId);
+    String getNewsDetail(String newsId);
 	
 	/**
 	 * @description 更加资讯ID获取所有评论列表
@@ -45,5 +45,5 @@ public interface INewsService {
 	 * @since
 	 * @return
 	 */
-	public String getNewsCommentsList(String newsId,Integer pageNo,Integer pageSize);
+    String getNewsCommentsList(String newsId, Integer pageNo, Integer pageSize);
 }

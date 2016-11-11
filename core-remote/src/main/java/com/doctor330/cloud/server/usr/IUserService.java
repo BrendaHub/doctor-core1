@@ -12,7 +12,7 @@ public interface IUserService {
 	 * @param pageSize 页面大小
 	 * @return
 	 */
-	public String getBigShotList(String orderBy,Integer pageNo,Integer pageSize);
+    String getBigShotList(String orderBy, Integer pageNo, Integer pageSize);
 	
 	/**
 	 * @description 获取所有资讯列表
@@ -22,7 +22,7 @@ public interface IUserService {
 	 * @param userID 用户ID
 	 * @return
 	 */
-	public String getBigShotDetail(Integer userID);
+    String getBigShotDetail(Integer userID);
 	
 	/**
 	 * @description 添加用户信息
@@ -32,5 +32,5 @@ public interface IUserService {
 	 * @param userInfo
 	 * @return
 	 */
-	public String addUser(String userInfo);
+    String addUser(String userInfo);
 }

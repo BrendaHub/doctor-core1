@@ -23,7 +23,7 @@ public interface IMessageService extends Serializable {
 	 * @param offlineExpireTime 离线时间，单位为毫秒
 	 * @return Boolean
 	 */
-	public Boolean pushMessageToSingleUser(Integer userId , String transmissionContent ,Integer transmissionType,Integer offlineExpireTime);
+    Boolean pushMessageToSingleUser(Integer userId, String transmissionContent, Integer transmissionType, Integer offlineExpireTime);
 	
 	
 	

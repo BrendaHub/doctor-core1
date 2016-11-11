@@ -6,7 +6,7 @@ public class DataSourceContextHolder {
         contextHolder.set(dbType);  
     }  
     public static String getDbType() {  
-        return ((String) contextHolder.get());  
+        return contextHolder.get();
     }  
     public static void clearDbType() {  
         contextHolder.remove();  
