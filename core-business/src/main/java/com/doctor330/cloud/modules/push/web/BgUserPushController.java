@@ -24,7 +24,7 @@ import com.doctor330.cloud.modules.push.service.BgUserPushService;
 
 /**
  * 关于消息推送的用户信息记录Controller
- * @author 郑源
+ * @author 氪堂医疗
  * @version 2016-11-02
  */
 @Controller

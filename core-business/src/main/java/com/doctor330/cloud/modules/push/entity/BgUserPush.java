@@ -11,7 +11,7 @@ import com.doctor330.cloud.common.persistence.DataEntity;
 
 /**
  * 关于消息推送的用户信息记录Entity
- * @author 郑源
+ * @author 氪堂医疗
  * @version 2016-11-02
  */
 public class BgUserPush extends DataEntity<BgUserPush> {

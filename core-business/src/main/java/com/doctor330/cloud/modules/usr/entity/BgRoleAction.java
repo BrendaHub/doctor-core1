@@ -9,7 +9,7 @@ import com.doctor330.cloud.common.persistence.DataEntity;
 
 /**
  * 角色行为关系表Entity
- * @author 郑源
+ * @author 氪堂医疗
  * @version 2016-11-05
  */
 public class BgRoleAction extends DataEntity<BgRoleAction> {

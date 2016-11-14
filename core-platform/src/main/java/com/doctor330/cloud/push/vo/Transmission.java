@@ -3,7 +3,7 @@ package com.doctor330.cloud.push.vo;
 import java.io.Serializable;
 
 /**
- * @author  郑源
+ * @author  氪堂医疗
  * @date 创建时间：2016年3月2日 上午9:54:49 
  * @version 1.0 
  * @parameter  

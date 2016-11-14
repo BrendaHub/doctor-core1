@@ -9,7 +9,7 @@ import com.doctor330.cloud.modules.push.entity.BgUserPush;
 
 /**
  * 关于消息推送的用户信息记录DAO接口
- * @author 郑源
+ * @author 氪堂医疗
  * @version 2016-11-02
  */
 @MyBatisDao

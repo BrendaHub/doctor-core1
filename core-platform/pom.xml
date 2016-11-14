@@ -18,32 +18,32 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 			<!--个推 -->
-		<dependency>
-			<groupId>com.gexin.platform</groupId>
-			<artifactId>gexin-rp-sdk-http</artifactId>
-			<version>4.0.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.gexin.platform</groupId>
-			<artifactId>gexin-rp-sdk-base</artifactId>
-			<version>4.0.0.3</version>
-		</dependency>
-		<dependency>
-			<groupId>com.gexin.platform</groupId>
-			<artifactId>gexin-rp-sdk-template</artifactId>
-			<version>4.0.0.3</version>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.9.8</version>
-			<type>jar</type>
-		</dependency>
-		<dependency>
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
-			<version>2.5.0</version>
-		</dependency>
+	  <dependency>
+		  <groupId>com.gexin.platform</groupId>
+		  <artifactId>gexin-rp-sdk-http</artifactId>
+		  <version>4.0.1.0</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>com.gexin.platform</groupId>
+		  <artifactId>gexin-rp-sdk-base</artifactId>
+		  <version>4.0.0.3</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>com.gexin.platform</groupId>
+		  <artifactId>gexin-rp-sdk-template</artifactId>
+		  <version>4.0.0.3</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.codehaus.jackson</groupId>
+		  <artifactId>jackson-mapper-asl</artifactId>
+		  <version>1.9.8</version>
+		  <type>jar</type>
+	  </dependency>
+	  <dependency>
+		  <groupId>com.google.protobuf</groupId>
+		  <artifactId>protobuf-java</artifactId>
+		  <version>2.5.0</version>
+	  </dependency>
 		<!-- 环信 -->
 		
 	</dependencies>

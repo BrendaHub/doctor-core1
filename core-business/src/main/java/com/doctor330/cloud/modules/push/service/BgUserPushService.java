@@ -15,7 +15,7 @@ import com.doctor330.cloud.modules.push.dao.BgUserPushDao;
 
 /**
  * 关于消息推送的用户信息记录Service
- * @author 郑源
+ * @author 氪堂医疗
  * @version 2016-11-02
  */
 @Service

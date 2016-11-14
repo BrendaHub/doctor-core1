@@ -26,7 +26,6 @@
         <module name="core-business" />
         <module name="core-common" />
         <module name="core-platform" />
-        <module name="core-remote" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

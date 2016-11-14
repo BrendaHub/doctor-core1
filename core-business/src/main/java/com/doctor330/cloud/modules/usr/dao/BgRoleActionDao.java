@@ -9,7 +9,7 @@ import com.doctor330.cloud.modules.usr.entity.BgRoleAction;
 
 /**
  * 角色行为关系表DAO接口
- * @author 郑源
+ * @author 氪堂医疗
  * @version 2016-11-05
  */
 @MyBatisDao

@@ -3,7 +3,7 @@ package com.doctor330.cloud.server.news;
 /**
  * @description 资讯服务
  * @date 创建时间：2016年10月24日 下午16:58:00
- * @author 郑源
+ * @author 氪堂医疗
  * @version 2.0
  * @parameter
  * @since
@@ -13,7 +13,7 @@ public interface INewsService {
 
 	/**
 	 * @description 获取所有资讯列表
-	 * @author 郑源
+	 * @author 氪堂医疗
 	 * @date 创建时间：2016年10月24日 下午16:58:00
 	 * @version 2.0
 	 * @param orderBy 标准查询有效， 实例： updatedate desc, name asc
@@ -25,7 +25,7 @@ public interface INewsService {
 
 	/**
 	 * @description 获取所有资讯列表
-	 * @author 郑源
+	 * @author 氪堂医疗
 	 * @date 创建时间：2016年10月24日 下午16:58:00
 	 * @version 2.0
 	 * @param newsId 资讯ID
@@ -36,7 +36,7 @@ public interface INewsService {
 	
 	/**
 	 * @description 更加资讯ID获取所有评论列表
-	 * @author 郑源
+	 * @author 氪堂医疗
 	 * @date 创建时间：2016年10月27日 下午15:38:00
 	 * @version 2.0
 	 * @param newsId 资讯ID

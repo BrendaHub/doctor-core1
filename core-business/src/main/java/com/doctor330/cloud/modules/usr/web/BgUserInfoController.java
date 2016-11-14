@@ -24,7 +24,7 @@ import com.doctor330.cloud.modules.usr.service.BgUserInfoService;
 
 /**
  * 用户信息表Controller
- * @author 郑源
+ * @author 氪堂医疗
  * @version 2016-11-05
  */
 @Controller

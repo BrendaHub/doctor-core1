@@ -8,7 +8,7 @@
   	<module>core-admin</module>
   	<module>core-business</module>
   	<module>core-common</module>
-  	<module>core-remote</module>
+  	<!--module>core-remote</module-->
   	<module>core-platform</module>
   </modules>
   
@@ -105,35 +105,35 @@
 	
 	
 	<!-- 设定主仓库，按设定顺序进行查找。 -->
-	<repositories>
-	
+	<!--repositories>
+
 		<repository>
-			<id>jeesite-repos</id>
-			<name>Jeesite Repository</name>
+			<id>doclib-repos</id>
+			<name>doclib Repository</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
 		</repository>
-	</repositories>
-	
+	</repositories-->
+
 	<!-- 设定插件仓库 -->
-	<pluginRepositories> 
-	
+	<!--pluginRepositories>
+
 		<pluginRepository>
-			<id>jeesite-repos</id>
-			<name>Jeesite Repository</name>
+			<id>doclib-repos</id>
+			<name>doclib Repository</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
 		</pluginRepository>
-	</pluginRepositories> 
+	</pluginRepositories-->
 	
-	<distributionManagement>
+	<!--distributionManagement>
 		<repository>
 			<id>nexus-releases</id>
 			<name>Nexus Releases repository</name>
-			<url>http://repos.doctor330.com/nexus/content/repositories/releases/</url>
+			<url>http://192.168.1.201/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus-snapshots</id>
 			<name>Nexus Snapshots Repository</name>
-			<url>http://repos.doctor330.com/nexus/content/repositories/snapshots/</url>
+			<url>http://192.168.1.201/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
-	</distributionManagement>
+	</distributionManagement-->
 </project>

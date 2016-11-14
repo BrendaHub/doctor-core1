@@ -14,7 +14,7 @@ import com.gexin.rp.sdk.template.NotificationTemplate;
 import com.gexin.rp.sdk.template.TransmissionTemplate;
 
 /**
- * @author 郑源
+ * @author 氪堂医疗
  * @date 创建时间：2016年2月25日 下午7:35:52
  * @version 1.0
  * @parameter

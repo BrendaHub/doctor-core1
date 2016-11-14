@@ -16,7 +16,7 @@ import com.doctor330.cloud.push.vo.Notification;
 import com.doctor330.cloud.server.common.IRedisService;
 
 /**
- * @author  郑源
+ * @author  氪堂医疗
  * @date 创建时间：2016年10月31日 下午19:52:48 
  * @version 2.0 
  * @parameter  
