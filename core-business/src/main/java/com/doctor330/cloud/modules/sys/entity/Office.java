@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.sys.entity;
 
@@ -13,7 +13,7 @@ import com.doctor330.cloud.common.persistence.TreeEntity;
 
 /**
  * 机构Entity
- * @author ThinkGem
+ * @author Doctor330
  * @version 2013-05-15
  */
 public class Office extends TreeEntity<Office> {

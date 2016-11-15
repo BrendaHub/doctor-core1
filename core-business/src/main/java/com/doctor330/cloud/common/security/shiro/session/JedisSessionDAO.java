@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.common.security.shiro.session;
 
@@ -31,7 +31,7 @@ import com.google.common.collect.Sets;
 
 /**
  * 自定义授权会话管理类
- * @author ThinkGem
+ * @author Doctor330
  * @version 2014-7-20
  */
 public class JedisSessionDAO extends AbstractSessionDAO implements SessionDAO {

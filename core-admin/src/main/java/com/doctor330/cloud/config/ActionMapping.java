@@ -4,11 +4,6 @@ import java.util.Collections;
 import java.util.List;
 
 import com.doctor330.cloud.interceptor.Interceptor;
-
-
-
-
-
 public class ActionMapping{
 	private String actionName;
 	private Class<?> actionClass;

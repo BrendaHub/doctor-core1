@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.oa.entity;
 
@@ -9,7 +9,7 @@ import com.doctor330.cloud.modules.sys.entity.User;
 
 /**
  * 审批Entity
- * @author thinkgem
+ * @author Doctor330
  * @version 2014-05-16
  */
 public class TestAudit extends ActEntity<TestAudit> {

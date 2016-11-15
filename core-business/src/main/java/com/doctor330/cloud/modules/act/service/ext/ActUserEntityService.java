@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.act.service.ext;
 
@@ -24,7 +24,7 @@ import com.google.common.collect.Lists;
 
 /**
  * Activiti User Entity Service
- * @author ThinkGem
+ * @author Doctor330
  * @version 2013-11-03
  */
 @Service

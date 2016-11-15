@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.oa.service;
 
@@ -18,7 +18,7 @@ import com.doctor330.cloud.modules.oa.entity.OaNotifyRecord;
 
 /**
  * 通知通告Service
- * @author ThinkGem
+ * @author Doctor330
  * @version 2014-05-16
  */
 @Service

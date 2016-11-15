@@ -10,6 +10,7 @@ import com.mangofactory.swagger.plugin.EnableSwagger;
 import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
 
 /**
+<<<<<<< HEAD
  * 项目名称：apidoc
  *
  * @description:
@@ -20,6 +21,19 @@ import com.mangofactory.swagger.plugin.SwaggerSpringMvcPlugin;
  */
 //@Configuration
 @EnableSwagger
+=======
+ * 项目名称：swagger apidoc
+ *
+ * @description:
+ * @author chenhj(brenda)
+ * @create_time：2016年11月11日 上午10:27:51
+ * @version V1.0.0
+ *
+ */
+@Configuration
+@EnableSwagger
+// Loads the spring beans required by the framework
+>>>>>>> origin/master
 public class MySwaggerConfig
 {
 

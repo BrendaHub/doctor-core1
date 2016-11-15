@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.common.persistence.interceptor;
 
@@ -23,7 +23,7 @@ import java.util.Properties;
 
 /**
  * 数据库分页插件，只拦截查询语句.
- * @author poplar.yfyang / thinkgem
+ * @author poplar.yfyang / Doctor330
  * @version 2013-8-28
  */
 @Intercepts({@Signature(type = Executor.class, method = "query",

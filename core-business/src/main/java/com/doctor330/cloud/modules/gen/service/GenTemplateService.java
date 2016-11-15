@@ -1,5 +1,5 @@
 /**
- * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
+ * Copyright &copy; 2012-2016 <a href="https://github.com/Doctor330/jeesite">JeeSite</a> All rights reserved.
  */
 package com.doctor330.cloud.modules.gen.service;
 
@@ -16,7 +16,7 @@ import com.doctor330.cloud.modules.gen.entity.GenTemplate;
 
 /**
  * 代码模板Service
- * @author ThinkGem
+ * @author Doctor330
  * @version 2013-10-15
  */
 @Service
